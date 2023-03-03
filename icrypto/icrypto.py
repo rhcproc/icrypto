@@ -30,8 +30,8 @@ class ICrypto:
 
     def get_text_data_padding(self, data):
         size = len(data)
-        remiander = size%16
-        if remiander != 0: data = data.rjust(size+(16-remiander))
+        remainder = size%16
+        if remainder != 0: data = data.rjust(size+(16-remainder))
         return data
         
     def encrypt(self, data, algorithm='AES'):
